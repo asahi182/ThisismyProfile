@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <style>
+        body {
+            background: url('file:///C:/Users/USER/Desktop/peakpx.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            margin-top: 20px;
+        }
+
+        #profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .zoomable {
+            border-radius: 15px;
+            width: 200px;
+            height: 250px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .zoomable:hover {
+            transform: scale(1.1); /* Kapag hover, palakihin nang kaunti */
+        }
+
+        #interests-container,
+        #goals-container {
+            display: none;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .album-item img {
+            border-radius: 10px;
+            width: 150px;
+            height: 200px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        #interests-button,
+        #goals-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hi! It's Me! Mark Kevin Gajo,<br>Your Beginner IT student of ICCT - Main Campus</h1>
+
+    <div id="main-container">
+        <div id="profile-container">
+            <!-- Zoomable Profile Picture -->
+            <img class="zoomable" src="C:/Users/USER/Desktop/400482479_876572647117459_8504028722669558282_n.jpg" alt="Profile Picture">
+            
+            <!-- Buttons for Interests and Goals -->
+            <button id="interests-button" onclick="toggleText('interests-container')">My Interests</button>
+            <button id="goals-button" onclick="toggleText('goals-container')">My Goals</button>
+        </div>
+
+        <div id="interests-container">
+            <p></p>
+            <p>I am interested in things that will increase my knowledge and help me make my life even better. I want my family and I to have a good life, so I work hard in this world, because I don't want my child to experience the hardships that I experienced.</p>
+            <p>I also want to be an inspiration to others because of my age and life situation. I forced myself to finish school so that I can also inspire my son to strive for success.</p>
+        </div>
+
+        <div id="goals-container">
+            <p></p>
+            <p>My goal in life is to have my own business, not big but able to support my family, because I want my business to be inherited by my son and grandson so that they don't have to suffer anymore.</p>
+            <p>I want to be successful in studying so that I can have a foundation in this life that I can really use in the future.</p>
+        </div>
+    </div>
+    
+    <!-- Zoomable Pictures -->
+    <div class="album-item">
+        <img class="zoomable" src="C:/Users/USER/Desktop/368887892_295702476785074_7362522250281224943_n.jpg" alt="Photo 1">
+    </div>
+    <div class="album-item">
+        <img class="zoomable" src="C:/Users/USER/Desktop/370129023_318493357695958_9087096913299630469_n.jpg" alt="Photo 2">
+    </div>
+    <div class="album-item">
+        <img class="zoomable" src="C:/Users/USER/Desktop/370270297_1018423925897682_4391792555907538649_n.jpg" alt="Photo 3">
+    </div>
+    <div class="album-item">
+        <img class="zoomable" src="C:/Users/USER/Desktop/400535134_732579078737743_5663880544356251224_n.jpg" alt="Photo 4">
+    </div>
+    <div class="album-item">
+        <img class="zoomable" src="C:/Users/USER/Desktop/400596401_264298249597565_7159448577418007107_n.jpg" alt="Photo 5">
+    </div>
+    <div class="album-item">
+        <img class="zoomable" src="C:/Users/USER/Desktop/400815363_852430773331387_2381085128862444133_n.jpg" alt="Photo 6">
+    </div>
+
+    <script>
+        function toggleText(containerId) {
+            var interestsContainer = document.getElementById("interests-container");
+            var goalsContainer = document.getElementById("goals-container");
+
+            interestsContainer.style.display = (containerId === 'interests-container' && interestsContainer.style.display === "none") ? "block" : "none";
+            goalsContainer.style.display = (containerId === 'goals-container' && goalsContainer.style.display === "none") ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
